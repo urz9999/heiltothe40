@@ -84,7 +84,14 @@ window.heiltothe40.hint = () => {
 
 window.heiltothe40.init = () => {
     window.heiltothe40.enigmaNumber = 1;
+    for(let i = 1; i <= 6; i++) {
+        document.getElementById(`enigma${i}`).classList.add("hidden");
+    }
+};
 
+window.heiltothe40.start = () => {
+    document.getElementById("start").classList.add("hidden");
+    document.getElementById("navigator").classList.remove("hidden");
     window.heiltothe40.setUI();
 };
 
