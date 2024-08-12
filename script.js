@@ -8,7 +8,8 @@ window.heiltothe40.hints = [
     "schema per sostituzione e a step!",
     "Agisci con uno schema ben definito, appuntati le informazioni con carta e penna, è simile a mastermind.",
     "Anche questo enigma è molto semplice, ragiona bene sulle parole, è in piena luce del sole!",
-    "Una volta qui, pensa ad una tastiera completa con tastierino numerico, questa informazione è utile per il confronto finale oltre che per l'enigma in sè!"
+    "Una volta qui, pensa ad una tastiera completa con tastierino numerico, questa informazione è utile per il confronto finale oltre che per l'enigma in sè!",
+    "Fai riferimento al pdf",
 ];
 
 window.heiltothe40.answers = [
@@ -17,7 +18,8 @@ window.heiltothe40.answers = [
     "4",
     "6347",
     "4",
-    "24644"
+    "24644",
+    "Kumani Puraki",
 ];
 
 window.heiltothe40.results = [
@@ -26,11 +28,12 @@ window.heiltothe40.results = [
    false,
    false,
    false,
-   false
+   false,
+   false,
 ];
 
 window.heiltothe40.setUI = () => {
-    for(let i = 1; i <= 6; i++) {
+    for(let i = 1; i <= window.heiltothe40.answers.length; i++) {
         if(i > window.heiltothe40.enigmaNumber) {
             document.getElementById(`enigma${i}`).classList.add("hidden");
         } else {
@@ -43,7 +46,7 @@ window.heiltothe40.setUI = () => {
         if (window.heiltothe40.results[0] === false) {
             document.getElementById("next").setAttribute("disabled", "disabled");
         }
-    } else if(window.heiltothe40.enigmaNumber === 6) {
+    } else if(window.heiltothe40.enigmaNumber === window.heiltothe40.answers.length) {
         document.getElementById("next").setAttribute("disabled", "disabled");
     } else {
         if (window.heiltothe40.results[window.heiltothe40.enigmaNumber - 1] === false) {
@@ -62,14 +65,15 @@ window.heiltothe40.next  = () => {
 
 window.heiltothe40.check = () => {
     const userAnswer = document.getElementById(`answer${window.heiltothe40.enigmaNumber}`).value.toLowerCase();
-    if (userAnswer === window.heiltothe40.answers[window.heiltothe40.enigmaNumber - 1]) {
-        if(window.heiltothe40.enigmaNumber < 6) {
+    if (userAnswer === window.heiltothe40.answers[window.heiltothe40.enigmaNumber - 1].toLowerCase()) {
+        if(window.heiltothe40.enigmaNumber < window.heiltothe40.answers.length) {
             alert('Ottimo lavoro agente Sangalli! Hai trovato l\'artefatto numero ' + window.heiltothe40.enigmaNumber);
         } else {
             alert('Complimenti agente Sangalli! Hai trovato tutti gli artefatti, ora salvati in un luogo sicuro le risposte ti torneranno utili alla fine per completare la missione');
         }
 
         document.getElementById(`prize${window.heiltothe40.enigmaNumber}`).classList.remove("hidden");
+        document.getElementById(`story${window.heiltothe40.enigmaNumber}`).classList.remove("hidden");
         window.heiltothe40.results[window.heiltothe40.enigmaNumber - 1] = true;
         window.heiltothe40.next();
         window.heiltothe40.setUI();
@@ -84,7 +88,7 @@ window.heiltothe40.hint = () => {
 
 window.heiltothe40.init = () => {
     window.heiltothe40.enigmaNumber = 1;
-    for(let i = 1; i <= 6; i++) {
+    for(let i = 1; i <= window.heiltothe40.answers.length; i++) {
         document.getElementById(`enigma${i}`).classList.add("hidden");
     }
 };
@@ -98,18 +102,3 @@ window.heiltothe40.start = () => {
 document.addEventListener("DOMContentLoaded", () => {
     window.heiltothe40.init();
 });
-
-
-
-
-
-function checkCombination() {
-    const correctCombination = '486';
-    const userCombination = document.getElementById('combination').value;
-    if (userCombination === correctCombination) {
-        document.getElementById('finalPrize').style.display = 'block';
-        alert('Congratulations! You have unlocked the final prize!');
-    } else {
-        alert('Incorrect combination, try again.');
-    }
-}
