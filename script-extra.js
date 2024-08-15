@@ -4,13 +4,16 @@ window.heiltothe40.enigmaNumber = 1;
 
 window.heiltothe40.hints = [
     "Devi trovare informazioni sull'alfabeto della lingua Maya, scritto in glifi. Cerca anche di dedurre il metodo di scrittura/lettura dal nostro aiuto in codice. Quindi indovina la parola d'ordine della valigetta con il primo indizio che abbiamo preparato.",
+    "E' un problema di logica simile al nostro caso sul raduno dei mafiosi, crea uno schema e dettaglia tutti gli elementi in tabella."
 ];
 
 window.heiltothe40.answers = [
     "punti cardinali",
+    "24",
 ];
 
 window.heiltothe40.results = [
+   false,
    false,
 ];
 
@@ -35,12 +38,11 @@ window.heiltothe40.check = () => {
     const userAnswer = document.getElementById(`answer${window.heiltothe40.enigmaNumber}`).value.toLowerCase();
     if (userAnswer === window.heiltothe40.answers[window.heiltothe40.enigmaNumber - 1].toLowerCase()) {
         if(window.heiltothe40.enigmaNumber < window.heiltothe40.answers.length) {
-            alert('Ottimo lavoro agente Sangalli! Hai trovato l\'artefatto numero ' + window.heiltothe40.enigmaNumber);
+            alert('Ottimo lavoro agente Sangalli! Hai risolto l\'enigma extra numero ' + window.heiltothe40.enigmaNumber);
         } else {
-            alert('Complimenti agente Sangalli! Hai trovato tutti gli artefatti, ora salvati in un luogo sicuro le risposte ti torneranno utili alla fine per completare la missione');
+            alert('Complimenti agente Sangalli! Hai ottenuto tutti gli indizi extra, ora salvati in un luogo sicuro le risposte ti torneranno utili alla fine per completare la missione');
         }
 
-        document.getElementById(`prize${window.heiltothe40.enigmaNumber}`).classList.remove("hidden");
         document.getElementById(`story${window.heiltothe40.enigmaNumber}`).classList.remove("hidden");
         window.heiltothe40.results[window.heiltothe40.enigmaNumber - 1] = true;
         window.heiltothe40.next();
