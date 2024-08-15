@@ -3,29 +3,14 @@ window.heiltothe40 = window.heiltothe40 || {};
 window.heiltothe40.enigmaNumber = 1;
 
 window.heiltothe40.hints = [
-    "è semplice matematica, osserva bene l'immagine, non farti trarre in inganno!",
-    "il ragionamento è sempre legato alle triplette, non è necessaria matematica complicata, lo spazio vuoto è considerato X.",
-    "schema per sostituzione e a step!",
-    "Agisci con uno schema ben definito, appuntati le informazioni con carta e penna, è simile a mastermind.",
-    "Anche questo enigma è molto semplice, ragiona bene sulle parole, è in piena luce del sole!",
-    "Una volta qui, pensa ad una tastiera completa con tastierino numerico, questa informazione è utile per il confronto finale oltre che per l'enigma in sè!",
+    "Devi trovare informazioni sull'alfabeto della lingua Maya, scritto in glifi. Cerca anche di dedurre il metodo di scrittura/lettura dal nostro aiuto in codice. Quindi indovina la parola d'ordine della valigetta con il primo indizio che abbiamo preparato.",
 ];
 
 window.heiltothe40.answers = [
-    "2",
-    "33",
-    "4",
-    "6347",
-    "4",
-    "24644",
+    "punti cardinali",
 ];
 
 window.heiltothe40.results = [
-   false,
-   false,
-   false,
-   false,
-   false,
    false,
 ];
 

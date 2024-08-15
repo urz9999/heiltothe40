@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detective Case - Solve the Mystery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background">
+        <div class="opacity-mask">
+            <header class="justified-big">
+                <h1>The Great Museum Heist - Heil to the 40! - Aiuti dalla base</h1>
+                <p>Salve Agente Sangalli, sono il Generale Supremo <b>Alex</b> delle Forze di difesa Aereospaiali e del fronte di difesa Mondiale! Abbiamo saputo che la ricerca e la soluzione dell'ultimo artefatto sono molto più impegnative del previsto!
+                    <br>
+                   Per venirle incontro anche il noastro team di Analisti si è attivato per darle una mano. Abbiamo chiesto al Prof. Pier di cominciare ad analizzare le foto e i dossier da lei inviateci durante la missione e abbiamo preparato <b>una serie di Aiuti</b> per completare la missione! 
+                
+                <p>Purtroppo le forze del male sono sempre in agguato, questo vuol dire che non possiamo permettere a <b>Sgommaway</b> di intercettare i nostri aiuti, quindi abbiamo ideato un sistema in codice per darle dei suggerimenti: dovrà risolvere dei nuovi enigmi per ottenere preziose informazioni sull'enigma finale!</p>
+
+                <br>
+
+                <p>Contiamo su di lei Agente Sangalli! Non demorda, siamo vicini alla risoluzione del caso!</p>
+            </header>
+            <main>
+                <div class="enigma" id="enigma1">
+                    <h2>Enigma Extra 1</h2>
+                    <p>
+                        Dato il seguente schema, prova a decifrare il messaggio subito sotto
+                    </p>
+                    <p>
+                        <img src="0.jpg">
+                    </p>
+                    <br>
+                    <p>
+                        <img src="enigma.jpg">
+                    </p>
+                    <input type="text" id="answer1" placeholder="Inserisci la tua risposta">
+                    <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWOACWytpQ_0Obdfv2IaGwz49JKSi6UY0CUw&s" class="prize-image hidden" id="prize1" alt="Artifact 1"></p>
+                    <br>
+                    <span id="story1" class="hidden">
+                        Dopo aver risolto l'enigma e dato la combinazione esatta, la valigetta inviata dal dipartimento di difesa si sblocca magneticamente e, una volta aperta, rivela un foglio in carta incendiabile che riporta la seguente frase:
+                        "L'enigma è l'indizio!".
+                    </span>
+                </div>
+
+                <button id="start" onclick="window.heiltothe40.start();">Comincia l'indagine</button>
+                <button id="go-back" onclick="window.location.href = 'index.html'">Tornare all'indagine principale</button>
+
+               
+                <div id="navigator" class="navigator hidden">
+                    <button id="check" onclick="window.heiltothe40.check();">Controlla</button>
+                    <button id="hint" onclick="window.heiltothe40.hint();">aiuto</button>
+                </div>
+            </main>
+        </div>
+        
+    </div>
+
+    <script src="script-extra.js"></script>
+</body>
+</html>
