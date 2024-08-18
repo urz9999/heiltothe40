@@ -4,17 +4,20 @@ window.heiltothe40.enigmaNumber = 1;
 
 window.heiltothe40.hints = [
     "Devi trovare informazioni sull'alfabeto della lingua Maya, scritto in glifi. Cerca anche di dedurre il metodo di scrittura/lettura dal nostro aiuto in codice. Quindi indovina la parola d'ordine della valigetta con il primo indizio che abbiamo preparato.",
-    "E' un problema di logica simile al nostro caso sul raduno dei mafiosi, crea uno schema e dettaglia tutti gli elementi in tabella."
+    "E' un problema di logica simile al nostro caso sul raduno dei mafiosi, crea uno schema e dettaglia tutti gli elementi in tabella.",
+    "Prendi carta e penna e prova diverse combinazioni, in teoria solo una riesce a dare 2 con questa sequenza di numeri, attenzione però: non invertire il loro ordine, questo non vale!"
 ];
 
 window.heiltothe40.answers = [
     "punti cardinali",
     "14",
+    "9+87-65+4-32-1"
 ];
 
 window.heiltothe40.results = [
    false,
    false,
+   false
 ];
 
 window.heiltothe40.setUI = () => {
