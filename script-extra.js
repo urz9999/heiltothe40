@@ -11,7 +11,7 @@ window.heiltothe40.hints = [
 window.heiltothe40.answers = [
     "punti cardinali",
     "14",
-    "5736912480"
+    "5038612947"
 ];
 
 window.heiltothe40.results = [
